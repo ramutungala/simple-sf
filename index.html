@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salesforce Developers</title>
+   <!-- <link href="main.css" rel="stylesheet" type="text/css" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="app"></div>
+<!-- container -->
+    <div id="container">
+        <!--  header -->
+        <div id="header">
+            <div id="logo">
+                <img src="https://developer.salesforce.com/resources2/images/salesforce-header-logo.png" alt="salesforce-header-logo" href="https://developer.salesforce.com">
+            </div>
+            <div id="navbar">
+                <ul>
+                    <li><a href="#">PRODUCTS</a>
+                        <div class="p-menu1">
+                            <p  class="dropdownvalues">Developer Centers</p>
+                            <ul class="dropdownvalues">
+                                <li><a href="#">Lightning Platform</a></li>                         
+                                <li><a href="#">Einstein</a></li>                         
+                                <li><a href="#">Salesforce DX</a></li>                         
+                                <li><a href="#">All Developer Centers</a></li>                         
+                            </ul>
+                        </div>
+                        <div class="p-menu2">
+                            <p class="dropdownvalues">Salesforce Products</p>
+                            <ul class="dropdownvalues">
+                                <li><a href="#">AppExchange</a></li>
+                                <li><a href="#">Commerce Cloud</a></li>
+                                <li><a href="#">Community Cloud</a></li>
+                                <li><a href="#">Einstein</a></li>
+                                <li><a href="#">Einstein Analytics</a></li>
+                                <li><a href="#">Heroku</a></li>
+                                <li><a href="#">Lightning</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Mulesoft</a></li>
+                                <li><a href="#">Platform</a></li>
+                                <li><a href="#">Salesforce DX</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">DOCUMENTATION</a>
+                        <div>
+                            <ul class="dropdownvalues">
+                                <li><a href="#">Lightning Component Library</a></li>
+                                <li><a href="#">Apex</a></li>
+                                <li><a href="#">Lightning Aura Components</a></li>
+                                <li><a href="#">APIs</a></li>
+                                <li><a href="#">All Documentation</a></li>                          
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">LEARN</a>
+                        <div>
+                            <ul class="dropdownvalues">
+                                <li><a href="#">Trailhead</a></li>
+                                <li><a href="#">Certification</a></li>
+                                <li><a href="#">Sample Gallery</a></li>
+                                <li><a href="#">Podcast</a></li>
+                                <li><a href="#">Video Gallery</a></li>
+                                <li><a href="#">Events and Webinars</a></li>
+                                <li><a href="#">Tools</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">COMMUNITY</a>
+                        <div>
+                            <ul class="dropdownvalues">
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Developer Groups</a></li>
+                                <li><a href="#">Partners</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">BLOG</a></li>
+                </ul>
+            </div>
+            <div id="search">
+                <form class="search-form" style="margin-top: 5px;height: 33px;">
+                    <input type="text" placeholder="Search.." name="searchinput">
+                    <button><img src="https://developer.salesforce.com/resource/images/SearchMobile.png" alt="asasd"></img></button>
+                </form>
+            </div>
+            <div id="login">
+                <button style="margin-top: 5px;border: none;background-color: rgb(1, 122, 180);color: white;height: 28px;width: 60px;font-size: 12px;font-weight: lighter;text-align: center;">
+                    <a>Login ></a>
+                </button>
+            </div>
+            <div id="signup">
+                <button style="margin-top: 5px;border: none;background-color: rgb(120, 191, 58);color: white;height: 28px;width: 70px;font-size: 12px;font-weight: lighter;text-align: center;">
+                    <a>Sign Up ></a>
+                </button>
+            </div>
+    </div>
+        <!-- content area -->
+        <div id="content_area">
+            <span id="left_col">
+                <img id="left_col_image" src="https://res.cloudinary.com/hy4kyit2a/image/upload/sf-developer-podcast-website-banner-4.svg" alt="left_col_image">
+            </span>
+            <span id="mid_col">
+                <a id="mid_col_a" href="#">
+                    <h2 id="mid_col_h2">Developer Podcast</h2>
+                    <p id="mid_col_p">Tune in to the Salesforce Developer Podcast to hear short and insightful stories for developers, from developers.</p>
+                </a>
+                <button><a id="mid_col_b_a">Listen Now ></a></button>
+            </span>
+            <span id="right_col">
+                <button id="button1" onclick="bring1();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-12-dev-homepage-nav-icon-31x29.png" alt="DPImage"><a>Developer Podcast</a></Button>
+                <button id="button2" onclick="bring2();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/community-migration-dev-hero-icon-final.png" alt="LWCImage"><a>Learn Web Components</a></Button>
+                <button id="button3" onclick="bring3();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-11-31x29-globalgathering-icon.png" alt="GGImage"><a>Global Gatherings</a></Button>
+                <button id="button4" onclick="bring4();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-12-dev-homepage-nav-icon-31x29.png" alt="SGImage"><a>Sample Gallery</a></Button>
+            </span>
+        </div>
+        <!-- extension area -->
+        <div id="ext_area">
+            <div id="ext_area_left">
+                <h2>Be a <span><em>Trailblazer</em></span> - Deliver continuous innovation</h2>
+                <p>The Salesforce Platform connects the entire customer journey across Sales, Service, Marketing, Commerce, and every touchpoint. Trailblazers like you deliver continuous innovation using powerful tools built right into one customer success platform, including modern app development practices, analytics, AI, and secure data integration. <a href="#">Learn more.</a></p>
+                <div id=ext_area_left_top>
+                    <div id=ext_area_left_top_left>
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-60x60-cloud.png" alt="Lightning Platform">
+                        <a href="#"><span>Lightning Platform</span><br>Build apps 5x faster with our secure multitenant platform.</a>
+                    </div>
+                    <div id=ext_area_left_top_right>
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-60x60-heroku.png" alt="Heroku">
+                        <a href="#"><span>Heroku</span><br>Build scalable apps with open languages and frameworks</a>
+                    </div>
+                </div>
+                <div id="ext_area_left_bot">
+                    <div id=ext_area_left_bot>
+                        <div id=ext_area_left_bot_left>
+                            <img src="https://res.cloudinary.com/hy4kyit2a/image/upload/einstein-homepage-icon.png" alt="Einstein">
+                            <a href="#"><span>Einstein</span><br>Build smarter apps with the world's most intelligent CRM</a>
+                        </div>
+                        <div id=ext_area_left_bot_right>
+                            <img src="https://s3.amazonaws.com/dfc-resources2-production/resources2/images/homepage/trailhead-logo.png" alt="Trailhead">
+                            <a href="#"><span>Trailhead</span><br>Blaze your trail and learn to build customer apps people love.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ext_area_right">
+                <div id="ext_area_right_left">
+                    <h2>Community</h2>
+                    <div id="ext_area_right_left_1">
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-35x35-events.png" alt="Upcoming Events">
+                        <a href="#"><span>Upcoming Events</span><br>Register for upcoming events and webinars.</a>
+                    </div>
+                    <div id="ext_area_right_left_2">
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-35x35-questions.png" alt="Ask Questions">
+                        <a href="#"><span>Ask Questions</span><br>Get help when you need it from Salesforce & community experts</a>
+                    </div>
+                    <div id="ext_area_right_left_3">
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-35x35-devgroup.png" alt="Join Your Local Dev Group">
+                        <a href="#"><span>Join Your Local Dev Group</span><br>Meet other developers & get best practices for building on the Salesforce Platform</a>
+                    </div>
+                </div>
+                <div id="ext_area_right_right">
+                    <h2>Resources & Tools</h2>
+                    <div id="ext_area_right_right_1">
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-35x35-tutorials.png" alt="Get Free Tutorials">
+                        <a href="#"><span>Get Free Tutorials</span><br>Trailhead is the fun and free way to learn Salesforce</a>
+                    </div>
+                    <div id="ext_area_right_right_2">
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-35x35-forcecom-ide.png" alt="Salesforce for VS Code">
+                        <a href="#"><span>Salesforce for VS Code</span><br>Develop & deploy Salesforce apps with a modern code editor.</a>
+                    </div>
+                    <div id="ext_area_right_right_3">
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-35x35-blog.png" alt="Latest Blog Posts">
+                        <a href="#"><span>Latest Blog Posts</span><br>Get the latest news & articles</a>
+                    </div>
+                    <div id="ext_area_right_right_4">
+                        <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-35x35-s1.png" alt="Getting Started">
+                        <a href="#"><span>Getting Started</span><br>Get free tools & learn how to build your first app</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer-bar">
+            <span>
+                <a>Join over 6.0 million Salesforce developers.</a>
+                <Button id="footerbutton"><a>Subscribe Now!</a></Button>
+            </span>
+        </div>
+        <div id="footer">
+            <div id="sitenav">
+                <div>
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li><a href="#">All Documentation</a></li>
+                        <li><a href="#">Apex</a></li>
+                        <li><a href="#">APIs</a></li>
+                        <li><a href="#">Lightning Aura Components</a></li>
+                        <li><a href="#">Lightning Component Library</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">AppExchange</a></li>
+                        <li><a href="#">Commerce Cloud</a></li>
+                        <li><a href="#">Community Cloud</a></li>
+                        <li><a href="#">Einstein</a></li>
+                        <li><a href="#">Einstein Analytics</a></li>
+                        <li><a href="#">Heroku</a></li>
+                        <li><a href="#">Lightning</a></li>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Mulesoft</a></li>
+                        <li><a href="#">Platform</a></li>
+                        <li><a href="#">Salesforce DX</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Developer Centers</h3>
+                    <ul>
+                        <li><a href="#">Architecture</a></li>
+                        <li><a href="#">Community Cloud</a></li>
+                        <li><a href="#">Einstein Analytics</a></li>
+                        <li><a href="#">Einstein Platform</a></li>
+                        <li><a href="#">Embedded Service SDK for Mobile</a></li>
+                        <li><a href="#">Heroku Developer Center</a></li>
+                        <li><a href="#">Identity</a></li>
+                        <li><a href="#">Integration and APIs</a></li>
+                        <li><a href="#">Lightning Apps</a></li>
+                        <li><a href="#">Lightning Flow</a></li>
+                        <li><a href="#">Marketing Cloud</a></li>
+                        <li><a href="#">Mobile Developer Center</a></li>
+                        <li><a href="#">Mulesoft Developer Center</a></li>
+                        <li><a href="#">Pardot Developer Center</a></li>
+                        <li><a href="#">Quip Developer Center</a></li>
+                        <li><a href="#">Salesforce DX</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Service Cloud</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Learn</h3>
+                    <ul> 
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Certification</a></li>
+                        <li><a href="#">Events and Webinars</a></li>
+                        <li><a href="#">Podcast</a></li>
+                        <li><a href="#">Sample Gallery</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Trailhead</a></li>
+                        <li><a href="#">Video Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">Developer Groups</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="finallinks">
+                <div id="copyright">
+                    <span>� Copyright 2000-2019 salesforce.com, inc. All rights reserved. Various trademarks held by
+                        their respective owners.<br>Salesforce.com, inc. The Landmark @ One Market, Suite 300, San
+                        Francisco, CA 94105, United States
+                    </span>
+                    <div id="finallinks-small">
+                        <a href="#">Privacy Statement</a>
+                        <a href="#">Security Statement</a>
+                        <a href="#">Terms of Use</a>
+                        <img src="https://developer.salesforce.com/resource/images/opinionlab-orange.gif" alt="Feedback">
+                        <a href="#">Feedback</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Language: <span style="color: #333333;">English</span></a>
+                    </div>
+                </div>
+                <div id="socialimages">
+                    <img src="https://developer.salesforce.com/resource/images/facebook.png" alt="facebook" vertical-align="middle">
+                    <img src="https://developer.salesforce.com/resource/images/twitter.png" alt="twitter">
+                    <img src="https://developer.salesforce.com/resource/images/g.png" alt="google">
+                    <img src="https://developer.salesforce.com/resource/images/linkedIn.png" alt="linkedIn">
+                    <img src="https://developer.salesforce.com/resource/images/youTube.png" alt="youTube">
+                </div>
+            </div>
+        </div>
+    </div><!-- end container -->
+    <script>
+        function bring1()
+        {
+            document.getElementById("left_col_image").src = "https://res.cloudinary.com/hy4kyit2a/image/upload/sf-developer-podcast-website-banner-4.svg";
+            document.getElementById("content_area").style.backgroundImage = "url('https://res.cloudinary.com/hy4kyit2a/image/upload/developer-website-banner-1280x249-bkgd-100.jpg')";
+            document.getElementById("mid_col_a").style.color = "#01344E";
+            document.getElementById("mid_col_h2").innerHTML = "Developer Podcast";
+            document.getElementById("mid_col_p").innerHTML = "Tune in to the Salesforce Developer Podcast to hear short and insightful stories for developers, from developers.";
+            document.getElementById("mid_col_b_a").innerHTML = "Listen Now >";
+            return false;
+        }
+        function bring2()
+        {
+            document.getElementById("left_col_image").src = "https://res.cloudinary.com/hy4kyit2a/image/upload/sf-for-js-devs-web-header_codey%20astro%20background.svg";
+            document.getElementById("content_area").style.backgroundImage = "url('https://res.cloudinary.com/hy4kyit2a/image/upload/developer-website-banner-1280x249-bkgd-100.jpg')";
+            document.getElementById("mid_col_a").style.color = "#01344E";
+            document.getElementById("mid_col_h2").innerHTML = "Learn Web Components";
+            document.getElementById("mid_col_p").innerHTML = "Got an hour? Learn Web Components and get a competitive edge!";
+            document.getElementById("mid_col_b_a").innerHTML = "Skill Up >";
+            return false;
+        }
+        function bring3()
+        {
+            document.getElementById("left_col_image").src = "https://res.cloudinary.com/hy4kyit2a/image/upload/banner_characters.svg";
+            document.getElementById("content_area").style.backgroundImage = "url('https://res.cloudinary.com/hy4kyit2a/image/upload/2019-10-Developer_Website_Hero_Banner-1280%C3%97248%20%281%29.png')";
+            document.getElementById("mid_col_a").style.color = "#FFFFFF";
+            document.getElementById("mid_col_h2").innerHTML = "#DF19 Global Gatherings";
+            document.getElementById("mid_col_p").innerHTML = "Learn, connect, and give back with your local Salesforce Developer Community Groups.";
+            document.getElementById("mid_col_b_a").innerHTML = "Register Here >";
+            return false;
+        }
+        function bring4()
+        {
+            document.getElementById("left_col_image").src = "https://res.cloudinary.com/hy4kyit2a/image/upload/CodeyDesk.png";
+            document.getElementById("content_area").style.backgroundImage = "url('https://res.cloudinary.com/hy4kyit2a/image/upload/background-homepage-hero-banners-sample-apps.png')";
+            document.getElementById("mid_col_a").style.color = "#FFFFFF";
+            document.getElementById("mid_col_h2").innerHTML = "Sample Gallery";
+            document.getElementById("mid_col_p").innerHTML = "See what you can build on the Salesforce platform with sample apps and explore reference code.";
+            document.getElementById("mid_col_b_a").innerHTML = "Check It Out >";
+            return false;
+        }
+    </script>
+</body>
+</html>
+
