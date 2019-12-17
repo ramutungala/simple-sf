@@ -132,6 +132,14 @@ form.search-form button {
     display: block;
 }
 
+.p-menu0 {
+    display: flex !important;
+}
+
+.p-menu1, .p-menu2 {
+    display: block;
+}
+
 #navbar ul li:hover div {
     visibility: visible;
     display: block;
@@ -141,16 +149,6 @@ form.search-form button {
     width: 170%;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-}
-
-.p-menu1 {
-    display: block;
-}
-
-.p-menu2 {
-    display: block;
-    margin-top: -129%;
-    margin-left: 170%;
 }
 
 .dropdownvalues {
