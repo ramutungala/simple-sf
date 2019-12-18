@@ -2,19 +2,18 @@
 <html>
 <head>
     <title>Salesforce Developers</title>
-   <!-- <link href="main.css" rel="stylesheet" type="text/css" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div id="app"></div>
 <!-- container -->
     <div id="container">
         <!--  header -->
         <div id="header">
-            <div id="logo">
+            <div class="logo">
                 <img src="https://developer.salesforce.com/resources2/images/salesforce-header-logo.png" alt="salesforce-header-logo" href="https://developer.salesforce.com">
             </div>
-            <div id="navbar">
+            <div id="burger"><button class="burgerbutton"><img src="https://developer.salesforce.com/resource/images/MenuMobile.png" alt="burger menu"></button></div>
+            <div class="navbar">
                 <ul>
                     <li><a href="#">PRODUCTS</a>
                         <div class="p-menu0">
@@ -82,19 +81,19 @@
                     <li><a href="#">BLOG</a></li>
                 </ul>
             </div>
-            <div id="search">
+            <div class="search">
                 <form class="search-form" style="margin-top: 5px;height: 33px;">
                     <input type="text" placeholder="Search.." name="searchinput">
                     <button><img src="https://developer.salesforce.com/resource/images/SearchMobile.png" alt="asasd"></img></button>
                 </form>
             </div>
-            <div id="login">
-                <button style="margin-top: 5px;border: none;background-color: rgb(1, 122, 180);color: white;height: 28px;width: 60px;font-size: 12px;font-weight: lighter;text-align: center;">
+            <div class="login">
+                <button class="loginbutton">
                     <a>Login ></a>
                 </button>
             </div>
-            <div id="signup">
-                <button style="margin-top: 5px;border: none;background-color: rgb(120, 191, 58);color: white;height: 28px;width: 70px;font-size: 12px;font-weight: lighter;text-align: center;">
+            <div class="signup">
+                <button class="signupbutton">
                     <a>Sign Up ></a>
                 </button>
             </div>
@@ -102,7 +101,7 @@
         <!-- content area -->
         <div id="content_area">
             <span id="left_col">
-                <img id="left_col_image" src="https://res.cloudinary.com/hy4kyit2a/image/upload/sf-developer-podcast-website-banner-4.svg" alt="left_col_image">
+                <img id="left_col_image" src="https://res.cloudinary.com/hy4kyit2a/image/upload/sf-developer-podcast-website-banner-4.svg" alt="left_col_image" align="middle">
             </span>
             <span id="mid_col">
                 <a id="mid_col_a" href="#">
@@ -112,10 +111,10 @@
                 <button><a id="mid_col_b_a">Listen Now ></a></button>
             </span>
             <span id="right_col">
-                <button id="button1" onclick="bring1();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-12-dev-homepage-nav-icon-31x29.png" alt="DPImage"><a>Developer Podcast</a></Button>
-                <button id="button2" onclick="bring2();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/community-migration-dev-hero-icon-final.png" alt="LWCImage"><a>Learn Web Components</a></Button>
-                <button id="button3" onclick="bring3();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-11-31x29-globalgathering-icon.png" alt="GGImage"><a>Global Gatherings</a></Button>
-                <button id="button4" onclick="bring4();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-12-dev-homepage-nav-icon-31x29.png" alt="SGImage"><a>Sample Gallery</a></Button>
+                <div><button id="button1" onclick="bring1();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-12-dev-homepage-nav-icon-31x29.png" alt="DPImage"><a>Developer Podcast</a></Button></div>
+                <div><button id="button2" onclick="bring2();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/community-migration-dev-hero-icon-final.png" alt="LWCImage"><a>Learn Web Components</a></Button></div>
+                <div><button id="button3" onclick="bring3();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-11-31x29-globalgathering-icon.png" alt="GGImage"><a>Global Gatherings</a></Button></div>
+                <div><button id="button4" onclick="bring4();" class="buttonset"><img src="https://res.cloudinary.com/hy4kyit2a/image/upload/2017-12-dev-homepage-nav-icon-31x29.png" alt="SGImage"><a>Sample Gallery</a></Button></div>
             </span>
         </div>
         <!-- extension area -->
@@ -123,23 +122,23 @@
             <div id="ext_area_left">
                 <h2>Be a <span><em>Trailblazer</em></span> - Deliver continuous innovation</h2>
                 <p>The Salesforce Platform connects the entire customer journey across Sales, Service, Marketing, Commerce, and every touchpoint. Trailblazers like you deliver continuous innovation using powerful tools built right into one customer success platform, including modern app development practices, analytics, AI, and secure data integration. <a href="#">Learn more.</a></p>
-                <div id=ext_area_left_top>
-                    <div id=ext_area_left_top_left>
+                <div id="ext_area_left_top">
+                    <div id="ext_area_left_top_left">
                         <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-60x60-cloud.png" alt="Lightning Platform">
                         <a href="#"><span>Lightning Platform</span><br>Build apps 5x faster with our secure multitenant platform.</a>
                     </div>
-                    <div id=ext_area_left_top_right>
+                    <div id="ext_area_left_top_right">
                         <img src="https://developer.salesforce.com/resources2/images/homepage/home-col-60x60-heroku.png" alt="Heroku">
                         <a href="#"><span>Heroku</span><br>Build scalable apps with open languages and frameworks</a>
                     </div>
                 </div>
                 <div id="ext_area_left_bot">
-                    <div id=ext_area_left_bot>
-                        <div id=ext_area_left_bot_left>
+                    <div id="ext_area_left_bot">
+                        <div id="ext_area_left_bot_left">
                             <img src="https://res.cloudinary.com/hy4kyit2a/image/upload/einstein-homepage-icon.png" alt="Einstein">
                             <a href="#"><span>Einstein</span><br>Build smarter apps with the world's most intelligent CRM</a>
                         </div>
-                        <div id=ext_area_left_bot_right>
+                        <div id="ext_area_left_bot_right">
                             <img src="https://s3.amazonaws.com/dfc-resources2-production/resources2/images/homepage/trailhead-logo.png" alt="Trailhead">
                             <a href="#"><span>Trailhead</span><br>Blaze your trail and learn to build customer apps people love.</a>
                         </div>

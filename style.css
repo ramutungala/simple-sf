@@ -19,7 +19,12 @@ body {
     display: flex;
 }
 
-#logo { 
+#burger {
+    display: none;
+    z-index: -22;
+}
+
+.logo { 
     float:left; 
     width:10%; 
     height:45px; 
@@ -27,7 +32,7 @@ body {
     margin: 0px 2%; 
 }
 
-#signup { 
+.signup { 
     float:left; 
     width:7%; 
     height:40px; 
@@ -36,7 +41,7 @@ body {
     font-size: 12px;
 }
 
-#login { 
+.login { 
     float:left; 
     width:6%; 
     height:40px; 
@@ -46,7 +51,31 @@ body {
     margin: 0; 
 }
 
-#search { 
+.loginbutton {
+    margin-top: 5px;
+    border: none;
+    background-color: rgb(1, 122, 180);
+    color: white;
+    height: 28px;
+    width: 60px;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.signupbutton {
+    margin-top: 5px;
+    border: none;
+    background-color: rgb(120, 191, 58);
+    color: white;
+    height: 28px;
+    width: 70px;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.search { 
     float:left; 
     width:16%;    
     margin: 0px 0% 0px 7%;  
@@ -74,14 +103,14 @@ form.search-form button {
     cursor: pointer;
 }
 
-#navbar { 
+.navbar { 
     width: 40%;
     height: 60px; 
     z-index: 3;
     padding: 0px 3%;
 }
 
-#navbar ul { 
+.navbar ul { 
     display: flex;
     margin: 0;
     padding: 0;
@@ -91,44 +120,43 @@ form.search-form button {
     font-size: 16px;
 }
 
-#navbar ul li { 
+.navbar ul li { 
     list-style: none;
     margin-top: 12px;
     width: fit-content;
-    margin-left: 1%;
     position: relative;
 }
 
-#navbar ul li a {
+.navbar ul li a {
     text-decoration: none;
     color: white;
     padding: 0 14px 14px;
 }
 
-#navbar ul li div {
+.navbar ul li div {
     visibility: hidden;
     z-index: -1;
     overflow: hidden;
     display: none;
 }
 
-#navbar ul li div ul {
+.navbar ul li div ul {
     text-align: left;
 }
 
-#navbar ul li div p {
+.navbar ul li div p {
     text-align: left;
     padding-left: 7%;
 }
 
-#navbar ul li:hover a{
+.navbar ul li:hover a{
     color: #0070d2;
     padding-bottom: 5px;
     display: block;
     position: inherit;
 }
 
-#navbar ul li:hover div p, #navbar ul li:hover div ul {
+.navbar ul li:hover div p, .navbar ul li:hover div ul {
     display: block;
 }
 
@@ -138,9 +166,10 @@ form.search-form button {
 
 .p-menu1, .p-menu2 {
     display: block;
+    border-top: none !important;
 }
 
-#navbar ul li:hover div {
+.navbar ul li:hover div {
     visibility: visible;
     display: block;
     background: white;
@@ -445,7 +474,6 @@ form.search-form button {
 }
 
 #sitenav div {
-    margin-left: 30px;
     width: 16%;
     margin-left: 4%;
 }
@@ -502,6 +530,9 @@ form.search-form button {
         padding: 7.5px 0px;
         width: 100%;
     } 
+    .search { 
+        margin: 0px 0% 0px 4%;  
+    }
     #ext_area_left {
         margin: 2% 2% 2% 4%;
         width: 44%;
@@ -521,18 +552,20 @@ form.search-form button {
 @media screen and (max-width:1200px){
     .dropdownvalues {
         font-size: 10px !important;
-        font-weight: lighter !important;
+        font-weight: bold !important;
     }
-    #navbar ul {
+    .navbar {
+        width: auto;
+    }
+    .search { 
+        margin: 0px 0% 0px 0%;  
+    }
+    .navbar ul {
         font-weight: bold;
         font-size: 12px;
     }
-    #navbar ul li a {
-        padding: 0 10px 14px 10px;
-    }
-    .p-menu2 {
-        margin-top: -130%;
-        margin-left: 170%;
+    .navbar ul li a {
+        padding: 0 6px 10px 6px;
     }
     #mid_col a h2 {
         font-size: 20px;
@@ -561,37 +594,97 @@ form.search-form button {
 }
 
 @media screen and (max-width:900px){
-    #header {
+    #header{
+        display: block !important;
+        height: 50vh;
+        width: 100%;
+    }
+    .navbar, .navbar ul, .logo, .login, .signup, .search {
         display: block;
+        height: fit-content;
+        width: 100%;
+        text-align: justify;
     }
-    #navbar {
-        display: block;
+    .login, .signup, .search{
+        margin: 0 25%;
+        width: 50%;
     }
-    #logo {
-        float: left;
+    .logo {
+        margin: 0 10%;
+        width: 40%;
     }
-    #search {
-        float: right;
+    .navbar ul {
+        padding-left: 5%;
+    }
+    .navbar ul li:hover a{
+        padding-bottom: 0;
+    }
+    .p-menu0{
+        margin-left: -10%;
+    }
+    #burger {
+        display: inline-block;
+        z-index: 0;
+        padding: 14px 2.5%;
+        margin: 0 10%;
+    }
+    .burgerbutton {
+        background-color: inherit;
+        border: none;
+    }
+    .burgerbutton:focus {
+        background-color: red;
+    }
+    .burgerbutton:focus .navbar ul li {
+        display: none !important;
+        visibility: hidden !important;
     }
     #content_area {
         display: block;
+        height: auto;
     }
     #left_col {
         display: none;
     }
-    form.search-form input {
-        display: none;
-        visibility: hidden;
+    #mid_col {
+        width: 100%;
+        text-align: center;
+        margin: 0 5%;
+        padding: 0;
+    }
+    #mid_col_h2 {
+        margin: none;
+    }
+    #mid_col button {
+        width: 50%;
+        margin: 0 25%;
+    }
+    #right_col {
+        height: auto;
+        width: 34%;
+        margin: auto;
+        padding: 0;
+        background:transparent 50%;
+        z-index: 1; 
+        display: flex; 
+        text-align: justify;
     }
     .buttonset a {
         display: none;
     }
     .buttonset {
         padding: 0;
+        margin: 0;
         display: inline-flex;
-        width: 8%;
+        text-align: center;
+        width: 35px;
+        height: 35px;
         background: none;
         clear: both;
+    }
+    .buttonset:focus {
+        background-color: none;
+        box-shadow: 0 0 0 2px white;
     }
     #ext_area {
         height: fit-content;
@@ -600,7 +693,7 @@ form.search-form button {
     #footer {
         height: fit-content;
     }
-    #ext_area, #ext_area_left, #ext_area_left_top, #ext_area_left_bot {
+    #ext_area, #ext_area_left, #ext_area_left_top, #ext_area_left_bot, #ext_area_right, #ext_area_right_left, #ext_area_right_right {
         display: block;
         clear: both;
         width: fit-content;
@@ -608,12 +701,6 @@ form.search-form button {
     }
     #ext_area_left_top_left, #ext_area_left_top_right, #ext_area_left_bot_left, #ext_area_left_bot_right {
         display: flex;
-        clear: both;
-        width: fit-content;
-        padding: auto;
-    }
-    #ext_area_right, #ext_area_right_left, #ext_area_right_right {
-        display: block;
         clear: both;
         width: fit-content;
         padding: auto;
@@ -632,5 +719,8 @@ form.search-form button {
         display: block;
         padding: 0 !important;
     }
-
+    #sitenav div {
+        width:fit-content ;
+        margin-left: 4%;
+    }
 }
